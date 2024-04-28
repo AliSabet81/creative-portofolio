@@ -3,6 +3,7 @@ import bg from "../../public/background/home-background.png";
 import RenderModel from "@/components/RenderModel";
 import Wizard from "@/components/models/Wizard";
 import Navigation from "@/components/navigation";
+import Harry from "@/components/models/Harry";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <div className="w-full h-screen">
         <Navigation />
         <RenderModel>
-          <Wizard />
+          <Harry />
         </RenderModel>
       </div>
     </main>
