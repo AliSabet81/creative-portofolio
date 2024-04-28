@@ -47,7 +47,9 @@ const NavButton = ({ x, y, label, link, icon, newTab }) => {
         aria-label={label}
         name={label}
       >
-        <span className="relative w-14 h-14 p-4">{getIcon(icon)}</span>
+        <span className="relative w-14 h-14 p-4 animate-spin-slow-reverse">
+          {getIcon(icon)}
+        </span>
       </Link>
     </div>
   );
