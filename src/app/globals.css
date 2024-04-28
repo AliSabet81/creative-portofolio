@@ -16,6 +16,10 @@
   .pause {
     animation-play-state: paused;
   }
+
+  .custom-bg {
+    @apply bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] shadow-glass-inset hover:shadow-glass-sm;
+  }
 }
 
 @keyframes move {
