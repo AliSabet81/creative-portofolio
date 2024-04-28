@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-export function Staff(props) {
+export default function Staff(props) {
   const { nodes, materials } = useGLTF("/models/staff-transformed.glb");
 
   const modelRef = useRef();

@@ -3,7 +3,7 @@ import bg from "../../../../public/background/projects-background.png";
 import ProjectList from "@/components/projects";
 import { projectsData } from "../../data";
 import RenderModel from "@/components/RenderModel";
-import { Staff } from "@/components/models/Staff";
+import Staff from "@/components/models/Staff";
 
 export default function Projects() {
   return (
