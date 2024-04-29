@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import clsx from "clsx";
 import React from "react";
 
@@ -47,6 +48,23 @@ const AboutDetails = () => {
             </sub>
           </p>
         </ItemLayout>
+        <ItemLayout className={"col-span-4 !p-0"}>
+          <img
+            className="w-full h-auto"
+            src="https://github-readme-stats.vercel.app/api/top-langs?username=AliSabet81&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false"
+            alt="AliSabet"
+            loading="lazy"
+          />
+        </ItemLayout>
+        <ItemLayout className={"col-span-8 !p-0"}>
+          <img
+            className="w-full h-auto"
+            src="https://github-readme-stats.vercel.app/api?username=AliSabet81&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false"
+            alt="AliSabet"
+            loading="lazy"
+          />
+        </ItemLayout>
+        
       </div>
     </section>
   );
