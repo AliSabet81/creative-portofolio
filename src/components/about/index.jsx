@@ -42,9 +42,9 @@ const AboutDetails = () => {
         </ItemLayout>
         <ItemLayout className="col-span-4 text-accent">
           <p className="font-semibold w-full text-left text-5xl">
-            4+{" "}
+            1+{" "}
             <sub className="font-semibold text-base">
-              4+ years of experience
+              1+ years of experience
             </sub>
           </p>
         </ItemLayout>
@@ -68,6 +68,23 @@ const AboutDetails = () => {
           <img
             className="w-full h-auto"
             src="https://skillicons.dev/icons?i=js,html,css,bootstrap,discord,express,git,github,linkedin,materialui,mongodb,nextjs,nodejs,npm,postman,react,stackoverflow,tailwind,ts,vite,vscode,yarn"
+            alt="AliSabet"
+            loading="lazy"
+          />
+        </ItemLayout>
+        <ItemLayout className={"col-span-6 !p-0"}>
+          <img
+            className="w-full h-auto"
+            src="https://github-readme-streak-stats.herokuapp.com?user=AliSabet81&theme=dark&hide_border=true&type=png&background=EB545400&ring=FEFE5B&currStreakLabel=FEFE5B"
+            alt="AliSabet"
+            loading="lazy"
+          />
+        </ItemLayout>
+
+        <ItemLayout className={"col-span-6 !p-0"}>
+          <img
+            className="w-full h-auto"
+            src="https://github-readme-stats.vercel.app/api/pin/?username=AliSabet81&repo=NextJs-Training&theme=transparent&hide_border=true&title_color=FEFE5B&text_color=FFFFFF&icon_color=FEFE5B&text_bold=false"
             alt="AliSabet"
             loading="lazy"
           />
