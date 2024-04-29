@@ -64,7 +64,14 @@ const AboutDetails = () => {
             loading="lazy"
           />
         </ItemLayout>
-        
+        <ItemLayout className={"col-span-full"}>
+          <img
+            className="w-full h-auto"
+            src="https://skillicons.dev/icons?i=js,html,css,bootstrap,discord,express,git,github,linkedin,materialui,mongodb,nextjs,nodejs,npm,postman,react,stackoverflow,tailwind,ts,vite,vscode,yarn"
+            alt="AliSabet"
+            loading="lazy"
+          />
+        </ItemLayout>
       </div>
     </section>
   );
