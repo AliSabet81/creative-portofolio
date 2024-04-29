@@ -3,6 +3,7 @@ import bg from "../../../../public/background/about-background.png";
 import RenderModel from "@/components/RenderModel";
 import { Staff } from "@/components/models/Staff";
 import Hat from "@/components/models/Hat";
+import AboutDetails from "@/components/about";
 
 export default function About() {
   return (
@@ -17,6 +18,13 @@ export default function About() {
           <Hat />
         </RenderModel>
       </div>
+      <div className="relative w-full h-screen flex flex-col items-center justify-center">
+        <div className="absolute flex flex-col items-center text-center top-[60%] left-1/2 -translate-y-1/2 -translate-x-1/2">
+          <h1 className="font-bold text-9xl text-accent">Ali Sabet</h1>
+          <p className="font-light text-foreground text-lg">Meet the wizard behind this portofolio</p>
+        </div>
+      </div>
+      <AboutDetails/>
     </>
   );
 }
