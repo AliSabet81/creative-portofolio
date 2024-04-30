@@ -3,9 +3,8 @@ import bg from "../../../../public/background/projects-background.png";
 import ProjectList from "@/components/projects";
 import { projectsData } from "../../data";
 import RenderModel from "@/components/RenderModel";
-// import Staff from "@/components/models/Staff";
-import dynamic from "next/dynamic";
 import Staff from "@/components/models/Staff";
+import { Laptop } from "@/components/models/Laptop";
 
 export default function Projects() {
   return (
@@ -18,9 +17,9 @@ export default function Projects() {
         className="-z-50 top-0 left-0 fixed w-full h-full object-cover object-center opacity-40 "
       />
       <ProjectList projects={projectsData} />
-      <div className="flex items-center justify-center fixed top-16 lg:top-20 -translate-x-1/2 lg:translate-x-0 -z-10 left-1/2 lg:-left-24 h-screen">
+      <div className="w-full fixed h-3/5 xs:h-3/4 sm:h-screen top-1/2 -translate-y-1/2 -z-20 -left-0 lg:-left-1/3">
         <RenderModel>
-          <Staff />
+          <Laptop />
         </RenderModel>
       </div>
     </>

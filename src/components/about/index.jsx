@@ -8,23 +8,24 @@ const AboutDetails = () => {
       <div className="grid grid-cols-12 xs:gap-6 gap-4 md:gap-8 w-full">
         <ItemLayout className="col-span-full lg:col-span-8 row-span-2 flex-col items-start">
           <h2 className="text-xl md:text-2xl text-left w-full capitalize">
-            Architect of Enchantment
+            The Coding Gamer: Leveling Up in Web Development
           </h2>
-          <p className="font-light text-xs sm:text-sm md:text-base">
-            My journey in web development is powered by an array of mystical
-            tools and languages, with JavaScript casting the core of my
-            enchantments. I wield frameworks like React.js and Next.js with
-            precision, crafting seamless portals (websites) that connect realms
-            (users) across the digital universe. The ancient arts of the
-            Jamstack empower me to create fast, secure, and dynamic experiences,
-            while my design skills ensure every creation is not only functional
-            but visually captivating. Join me as I continue to explore new
-            spells and technologies to shape the future of the web.
+          <p className="font-light text-sm sm:text-sm md:text-base">
+            My web development quest is fueled by an arsenal of powerful tools
+            and languages, with JavaScript serving as my primary weapon. I
+            expertly wield frameworks like React.js and Next.js to build
+            immersive digital realms (websites) that connect players (users)
+            across the vast cyberspace. The dynamic art of Jamstack empowers me
+            to create fast, secure, and captivating experiences, ensuring every
+            adventure is not only functional but visually stunning. As I
+            continue to conquer new challenges and explore emerging
+            technologies, join me in shaping the future of the web - one
+            thrilling line of code at a time.
           </p>
         </ItemLayout>
         <ItemLayout className="col-span-full xs:col-span-6 lg:col-span-4 text-accent">
           <p className="font-semibold w-full text-left text-2xl sm:text-5xl">
-            25+ <sub className="font-semibold text-base">clients</sub>
+            7+ <sub className="font-semibold text-base">projects</sub>
           </p>
         </ItemLayout>
         <ItemLayout className="col-span-full xs:col-span-6 lg:col-span-4 text-accent">
