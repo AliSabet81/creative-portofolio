@@ -10,7 +10,7 @@ export default function Contact() {
         priority
         sizes="100vw"
         alt="background-image"
-        className="-z-50 top-0 left-0 fixed w-full h-full object-cover object-center opacity-25 "
+        className="-z-50 top-0 left-0 fixed w-full h-full object-cover object-center opacity-40 "
       />
       <article className="relative w-full flex flex-col items-center justify-center py-8 sm:py-0 space-y-8">
         <div className="flex flex-col items-center justify-center space-y-6 w-full sm:w-3/4">
