@@ -9,8 +9,8 @@ export function Headphone(props) {
   );
   const modelRef = useRef();
 
-  useFrame((state, delta, xsFrame) => {
-    modelRef.current.rotation.y += 0.0005;
+  useFrame(() => {
+    modelRef.current.rotation.y += 0.0007;
   });
   return (
     <group

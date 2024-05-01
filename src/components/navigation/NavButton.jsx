@@ -6,7 +6,6 @@ import {
   NotebookText,
   Palette,
   Phone,
-  Twitter,
   User,
 } from "lucide-react";
 import Link from "next/link";

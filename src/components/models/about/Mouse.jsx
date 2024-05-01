@@ -1,12 +1,10 @@
 "use client";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
 
 export function Mouse(props) {
   const { nodes, materials } = useGLTF("/models/about/mouse-transformed.glb");
   const modelRef = useRef();
-
 
   return (
     <group
