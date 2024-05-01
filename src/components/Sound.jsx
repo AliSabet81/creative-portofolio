@@ -77,9 +77,9 @@ const Sound = () => {
   };
   return (
     <div className="fixed top-4 right-2.5 xs:right-4 z-50 group">
-      {showModal && (
+      {/* {showModal && (
         <Modal onCLose={() => setShowModal(false)} toggle={toggle} />
-      )}
+      )} */}
       <audio ref={audioRef} loop>
         <source src={"/audio/fly-me-to-the-moon.mp3"} type="audio/mpeg" />
         your browser does not support the audio element.
