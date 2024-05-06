@@ -16,7 +16,15 @@ Websites:
 
 */
 
-export const projectsData = [
+export interface IProjectsData {
+  id: number;
+  name: string;
+  description: string;
+  date: string;
+  demoLink: string;
+}
+
+export const projectsData: IProjectsData[] = [
   {
     id: 1,
     name: "Inja",
@@ -52,7 +60,6 @@ export const projectsData = [
     date: "2024-04-15",
     demoLink: "https://github.com/AliSabet81/React-native-crash-course",
   },
-
   {
     id: 6,
     name: "Open Twitch",
@@ -69,7 +76,14 @@ export const projectsData = [
   },
 ];
 
-export const BtnList = [
+export interface IBtnList {
+  label: string;
+  link: string;
+  icon: string;
+  newTab: boolean;
+}
+
+export const BtnList: IBtnList[] = [
   { label: "Home", link: "/", icon: "home", newTab: false },
   { label: "About", link: "/about", icon: "about", newTab: false },
   { label: "Projects", link: "/projects", icon: "projects", newTab: false },

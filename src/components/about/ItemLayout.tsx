@@ -1,7 +1,14 @@
 "use client";
 import clsx from "clsx";
 import { motion } from "framer-motion";
-const ItemLayout = ({ children, className }) => {
+import { ReactNode } from "react";
+const ItemLayout = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className: string;
+}) => {
   return (
     <motion.div
       initial={{ scale: 0 }}

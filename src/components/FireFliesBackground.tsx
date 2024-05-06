@@ -1,6 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+interface fireFly {
+  id: number;
+  top: string;
+  left: string;
+  animationDuration: string;
+}
+
 const createFireFly = () => ({
   id: Math.random(),
   top: `${Math.random() * 100}%`,
@@ -9,7 +16,7 @@ const createFireFly = () => ({
 });
 
 const FireFliesBackground = () => {
-  const [fireFlies, setFireFlies] = useState([]);
+  const [fireFlies, setFireFlies] = useState<fireFly[]>([]);
 
   useEffect(() => {
     const addFireFilyPeriodically = () => {

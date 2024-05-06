@@ -22,19 +22,25 @@ const item = {
   show: { scale: 1 },
 };
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 const Form = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormData>();
 
-  const sendEmail = (params) => {
+  const sendEmail = (params: Record<string, unknown> | undefined) => {
     const toastId = toast.loading("Sending your message, please wait...");
     emailjs
       .send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_SERVICE_ID ?? "",
+        process.env.NEXT_PUBLIC_TEMPLATE_ID ?? "",
         params,
         {
           publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
@@ -63,7 +69,7 @@ const Form = () => {
         }
       );
   };
-  const onSubmit = (data) => {
+  const onSubmit = (data: FormData) => {
     const temlpateParams = {
       to_name: "Ali Sabet",
       from_name: data.name,
@@ -72,7 +78,6 @@ const Form = () => {
     };
     sendEmail(temlpateParams);
   };
-  console.log(errors);
 
   return (
     <>

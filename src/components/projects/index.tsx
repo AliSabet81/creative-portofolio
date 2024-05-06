@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import ProjectLayout from "./ProjectLayout";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { IProjectsData } from "@/app/data";
 
 const container = {
   hidden: { opacity: 0 },
@@ -13,7 +14,7 @@ const container = {
     },
   },
 };
-const ProjectList = ({ projects }) => {
+const ProjectList = ({ projects }: { projects: IProjectsData[] }) => {
   return (
     <motion.div
       variants={container}

@@ -13,8 +13,9 @@ import React from "react";
 import ResponsiveComponent from "../ResponsiveComponent";
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import { IBtnList } from "@/app/data";
 
-const getIcon = (icon) => {
+const getIcon = (icon: string) => {
   switch (icon) {
     case "home":
       return <Home className="w-full h-auto" strokeWidth={1.5} />;
@@ -44,7 +45,13 @@ const item = {
   show: { scale: 1 },
 };
 
-const NavLink = motion(Link);
+const NavLink = motion<any>(Link);
+
+interface INavBtn extends IBtnList {
+  x: number | string;
+  y: number | string;
+  labelDirection?: "left" | "right";
+}
 
 const NavButton = ({
   x,
@@ -54,10 +61,10 @@ const NavButton = ({
   icon,
   newTab,
   labelDirection = "right",
-}) => {
+}: INavBtn) => {
   return (
     <ResponsiveComponent>
-      {({ size }) => {
+      {({ size }: { size: number }) => {
         return size && size >= 480 ? (
           <div
             className="w-fit absolute cursor-pointer z-50"

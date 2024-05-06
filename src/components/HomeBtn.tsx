@@ -4,7 +4,7 @@ import { Home } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-const NavLink = motion(Link);
+const NavLink = motion<any>(Link);
 
 const HomeBtn = () => {
   return (

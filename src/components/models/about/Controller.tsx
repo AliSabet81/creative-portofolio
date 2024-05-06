@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-export function Controller(props) {
+export function Controller(props: any) {
   const { nodes, materials } = useGLTF(
     "/models/about/controller-transformed.glb"
   );
@@ -20,7 +20,7 @@ export function Controller(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["Plane002_10_-_Default_0"].geometry}
+        geometry={(nodes["Plane002_10_-_Default_0"] as any).geometry}
         material={materials.PaletteMaterial001}
         position={[29.883, 16.402, 1.471]}
         rotation={[-0.56, 0, 0]}
@@ -28,7 +28,7 @@ export function Controller(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["Plane002_16_-_Default_0"].geometry}
+        geometry={(nodes["Plane002_16_-_Default_0"] as any).geometry}
         material={materials.PaletteMaterial002}
         position={[29.883, 16.402, 1.471]}
         rotation={[-0.56, 0, 0]}
@@ -36,7 +36,7 @@ export function Controller(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Box001_clear_0.geometry}
+        geometry={(nodes.Box001_clear_0 as any).geometry}
         material={materials.PaletteMaterial003}
         position={[-43.195, 46.596, -4.752]}
         rotation={[-0.56, 0, 0]}
