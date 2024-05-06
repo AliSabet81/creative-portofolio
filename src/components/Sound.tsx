@@ -5,7 +5,13 @@ import { Volume2, VolumeX } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-const Modal = ({ onCLose, toggle }) => {
+const Modal = ({
+  onClose,
+  toggle,
+}: {
+  onClose: () => void;
+  toggle: () => void;
+}) => {
   return createPortal(
     <div className="fixed inset-0 bg-background/60 backdrop-blur-sm flex items-center justify-center">
       <div className="bg-background/20 border border-accent/30 border-solid backdrop-blur-[6px] py-8 px-6 xs:px-10 sm:px-16 rounded shadow-glass-inset text-center space-y-8">
@@ -18,7 +24,7 @@ const Modal = ({ onCLose, toggle }) => {
             Yes
           </button>
           <button
-            onClick={onCLose}
+            onClick={onClose}
             className="px-4 py-2 border border-accent/30 border-solid hover:shadow-glass-sm rounded"
           >
             No
@@ -26,7 +32,7 @@ const Modal = ({ onCLose, toggle }) => {
         </div>
       </div>
     </div>,
-    document.getElementById("my-modal")
+    document.getElementById("my-modal") as HTMLElement
   );
 };
 
@@ -38,7 +44,7 @@ const Sound = () => {
   const handleFirstUserIntraction = () => {
     const consent = localStorage.getItem("musicConsent");
     if (consent === "true" && !isPlaying) {
-      audioRef.current.play();
+      (audioRef.current as any).play();
       setisPlaying(true);
     }
     ["click", "keydown", "touchstart"].forEach((event) => {
@@ -53,7 +59,8 @@ const Sound = () => {
     if (
       consent &&
       consentTime &&
-      new Date(consentTime).getTime() + 3 * 24 * 60 * 60 * 1000 > new Date()
+      new Date(consentTime).getTime() + 3 * 24 * 60 * 60 * 1000 >
+        new Date().getTime()
     ) {
       setisPlaying(consent === "true");
 
@@ -70,7 +77,9 @@ const Sound = () => {
   const toggle = () => {
     const newState = !isPlaying;
     setisPlaying((prev) => !prev);
-    newState ? audioRef.current.play() : audioRef.current.pause();
+    newState
+      ? (audioRef.current as any).play()
+      : (audioRef.current as any).pause();
     localStorage.setItem("musicConsent", String(newState));
     localStorage.setItem("consentTime", new Date().toISOString());
     setShowModal(false);
@@ -78,7 +87,7 @@ const Sound = () => {
   return (
     <div className="fixed top-4 right-2.5 xs:right-4 z-50 group">
       {/* {showModal && (
-        <Modal onCLose={() => setShowModal(false)} toggle={toggle} />
+        <Modal onClose={() => setShowModal(false)} toggle={toggle} />
       )} */}
       <audio ref={audioRef} loop>
         <source src={"/audio/fly-me-to-the-moon.mp3"} type="audio/mpeg" />

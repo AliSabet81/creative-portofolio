@@ -19,7 +19,7 @@ const container = {
 const Navigation = () => {
   const angleIncrement = 360 / BtnList.length;
 
-  const size = useScreenSize();
+  const size = useScreenSize() as number;
 
   const isLarge = size >= 1024;
   const isMedium = size >= 768;
@@ -27,7 +27,7 @@ const Navigation = () => {
   return (
     <div className="w-full fixed h-screen flex items-center justify-center">
       <ResponsiveComponent>
-        {({ size }) => {
+        {({ size }: { size: number }) => {
           return size && size >= 480 ? (
             <motion.div
               variants={container}

@@ -1,12 +1,10 @@
 "use client";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
 
-export function Mouse(props) {
+export function Mouse(props:any) {
   const { nodes, materials } = useGLTF("/models/about/mouse-transformed.glb");
   const modelRef = useRef();
-
 
   return (
     <group
@@ -20,7 +18,7 @@ export function Mouse(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Plane001_Material002_0.geometry}
+        geometry={(nodes.Plane001_Material002_0 as any).geometry}
         material={materials["Material.002"]}
         position={[2.113, -311.093, 130.453]}
         rotation={[-Math.PI / 2, -0.031, Math.PI / 2]}

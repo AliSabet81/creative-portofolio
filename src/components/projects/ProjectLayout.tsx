@@ -1,4 +1,5 @@
 'use client'
+import { IProjectsData } from "@/app/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
@@ -12,7 +13,7 @@ const item = {
 };
 
 const NavLink = motion(Link);
-const ProjectLayout = ({ name, description, date, demoLink }) => {
+const ProjectLayout = ({ name, description, date, demoLink }:IProjectsData) => {
   return (
     <NavLink
       variants={item}

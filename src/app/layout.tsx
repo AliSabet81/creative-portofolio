@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
@@ -6,12 +7,16 @@ import Sound from "@/components/Sound";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Ali Sabet",
   description: "Front-End developer",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body
